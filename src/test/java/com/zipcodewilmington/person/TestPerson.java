@@ -83,19 +83,73 @@ public class TestPerson {
         Assert.assertEquals(expectedName, actualName);
     }
 
-    @Test
-    public void testConstructorWithEmail() {
-        // Given
-        String expected = "Leon@xyz.com";
+//    @Test
+//    public void testConstructorWithEmail() {
+//        // Given
+//        String expected = "Leon@xyz.com";
+//
+//        // When
+//        Person person = new Person(expected);
+//
+//        // Then
+//        String actual = person.getEmail();
+//        Assert.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void testConstructorWithAddress() {
+//        // Given
+//        String expected = "123 Blah Drive";
+//
+//        // When
+//        Person person = new Person(expected);
+//
+//        // Then
+//        String actual = person.getAddress();
+//        Assert.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void testConstructorWithnickName() {
+//        // Given
+//        String expected = "Donut";
+//
+//        // When
+//        Person person = new Person(expected);
+//
+//        // Then
+//        String actual = person.getnickName();
+//        Assert.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//   public void testConstructorWithStudent() {
+//       // Given
+//        Boolean expected = true;
+//
+//       // When
+//        Person person = new Person(expected);
+//
+//        // Then
+//        Boolean actual = person.getIsStudent();
+//        Assert.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void testConstructorWithPets() {
+//        // Given
+//        Integer expected = 0;
+//
+//        // When
+//        Person person = new Person(expected);
+//
+//        // Then
+//        Integer actual = person.getPets();
+//        Assert.assertEquals(expected, actual);
+//    }
 
-        // When
-        Person person = new Person(expected);
 
-        // Then
-        String actual = person.getEmail();
-        Assert.assertEquals(expected, actual);
-    }
-
+    //Set and Get Tests Below
     @Test
     public void testSetName() {
         // Given
@@ -131,8 +185,64 @@ public class TestPerson {
         String expected = "Leon@xyz.com";
 
         // When
-        person.setName(expected);
+        person.setEmail(expected);
         String actual = person.getEmail();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetAddress() {
+        // Given
+        Person person = new Person();
+        String expected = "123 Blah Drive";
+
+        // When
+        person.setAddress(expected);
+        String actual = person.getAddress();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetnickName() {
+        // Given
+        Person person = new Person();
+        String expected = "Donut";
+
+        // When
+        person.setnickName(expected);
+        String actual = person.getnickName();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetStudent() {
+        // Given
+        Person person = new Person();
+        Boolean expected = true;
+
+        // When
+        person.setIsStudent(expected);
+        Boolean actual = person.getIsStudent();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetPets() {
+        // Given
+        Person person = new Person();
+        Integer expected = 0;
+
+        // When
+        person.setPets(expected);
+        Integer actual = person.getPets();
 
         // Then
         Assert.assertEquals(expected, actual);

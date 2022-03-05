@@ -56,7 +56,7 @@ public class Person {
         this.address = address;
     }
 
-    public void setNickName(String nickName) {
+    public void setnickName(String nickName) {
         this.nickName = nickName;
     }
 
@@ -78,6 +78,19 @@ public class Person {
 
     public String getEmail() {
         return this.email;
+    }
+
+    public String getAddress() {
+        return this.address;
+    }
+    public String getnickName() {
+        return this.nickName;
+    }
+    public Boolean getIsStudent() {
+        return this.isStudent;
+    }
+    public Integer getPets() {
+        return this.pets;
     }
 
 
