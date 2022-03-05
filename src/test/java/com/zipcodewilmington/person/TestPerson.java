@@ -12,6 +12,11 @@ public class TestPerson {
         // Given
         String expectedName = "";
         Integer expectedAge = Integer.MAX_VALUE;
+        String expectedEmail = "";
+        String expectedAddress = "";
+        String expectednickName = "";
+        Boolean expectedStudent = true;
+        Integer expectedPets = Integer.MAX_VALUE;
 
         // When
         Person person = new Person();
@@ -19,9 +24,19 @@ public class TestPerson {
         // Then
         String actualName = person.getName();
         Integer actualAge = person.getAge();
+        String actualEmail = person.getEmail();
+        String actualAddress = person.getAddress();
+        String actualnickName = person.getnickName();
+        Boolean actualStudent = person.getIsStudent();
+        Integer actualPets = person.getPets();
 
         Assert.assertEquals(expectedName, actualName);
         Assert.assertEquals(expectedAge, actualAge);
+        Assert.assertEquals(expectedEmail, actualEmail);
+        Assert.assertEquals(expectedAddress, actualAddress);
+        Assert.assertEquals(expectednickName, actualnickName);
+        Assert.assertEquals(expectedStudent, actualStudent);
+        Assert.assertEquals(expectedPets, actualPets);
     }
 
     @Test
@@ -69,6 +84,19 @@ public class TestPerson {
     }
 
     @Test
+    public void testConstructorWithEmail() {
+        // Given
+        String expected = "Leon@xyz.com";
+
+        // When
+        Person person = new Person(expected);
+
+        // Then
+        String actual = person.getEmail();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void testSetName() {
         // Given
         Person person = new Person();
@@ -95,4 +123,19 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetEmail() {
+        // Given
+        Person person = new Person();
+        String expected = "Leon@xyz.com";
+
+        // When
+        person.setName(expected);
+        String actual = person.getEmail();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
 }
